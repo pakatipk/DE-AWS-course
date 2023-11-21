@@ -21,15 +21,11 @@ spark = SparkSession \
     .appName("Wrangling Data") \
     .getOrCreate()
 
-path = "./lesson-2-spark-essentials/exercises/data/sparkify_log_small.json"
+path = "/Users/beek/GitHub_Repo/data_engineering_udacity/DE-AWS/data-lake/spark-essentials/data/sparkify_log_small.json"
 user_log_df = spark.read.json(path)
 
 
-# # Data Exploration 
-# 
-# # Explore the data set.
-
-
+# Data Exploration 
 # View 5 records 
 print(
     user_log_df.take(5)
